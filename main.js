@@ -78,13 +78,13 @@ function my_keydown(e)
 	
 	function up()
 	{
-		if(player_y >=0)
+		if(ball_y >=0)
 		{
-			player_y = player_y - block_image_height;
+			ball_y = ball_y - block_image_height;
 			console.log("block image height = " + block_image_height);
-			console.log("When Up arrow key is pressed, X = " + player_x + " , Y = "+player_y);
-			canvas.remove(player_object);
-			player_update();
+			console.log("When Up arrow key is pressed, X = " + ball_x + " , Y = "+ball_y);
+			canvas.remove(ball_obj);
+			new_image();
 		}
 	}
 
@@ -104,11 +104,11 @@ function my_keydown(e)
 	{
 		if(ball_x >5)
 		{
-			player_x = player_x - block_image_width;
+			ball_x = ball_x - block_image_width;
 			console.log("block image width = " + block_image_width);
-			console.log("When Left arrow key is pressed, X = " + player_x + " , Y = "+player_y);
-			canvas.remove(player_object);
-			player_update();
+			console.log("When Left arrow key is pressed, X = " + ball_x + " , Y = "+ball_y);
+			canvas.remove(ball_obj);
+			new_image();
 		}
 	}
 
@@ -116,11 +116,11 @@ function my_keydown(e)
 	{
 		if(ball_x <=1050)
 		{
-			player_x = player_x + block_image_width;
+			ball_x = ball_x + block_image_width;
 			console.log("block image width = " + block_image_width);
-			console.log("When Right arrow key is pressed, X = " + player_x + " , Y = "+player_y);
-			canvas.remove(player_object);
-			player_update();
+			console.log("When Right arrow key is pressed, X = " + ball_x + " , Y = "+ball_y);
+			canvas.remove(ball_obj);
+			new_image();
 		}
 	}
 	
